@@ -7,14 +7,19 @@ class Library:
     def add_book(self, book):
         self._books.append(book)
 
+    def search_books_by_title(self, title):
+        for book in self._books:
+            if book.title.lower() == title:
+                self.show_book(book)
+
     def search_books_by_author(self, author):
         for book in self._books:
-            if book.author == author:
+            if book.author.lower() == author:
                 self.show_book(book)
 
     def search_books_by_gender(self, gender):
         for book in self._books:
-            if book.gender == gender:
+            if book.gender.lower() == gender:
                 self.show_book(book)
 
     def show_all_books(self):
