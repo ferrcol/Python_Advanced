@@ -1,8 +1,8 @@
 import os.path
 from snack import Snack
 
-class service:
-    FILE_NAME = "snacks.txt"
+class Service:
+    FILE_NAME = "Vending_Machine/snacks.txt"
 
     def __init__(self):
         self.snacks = []
@@ -25,7 +25,7 @@ class service:
         try:
             with open(self.FILE_NAME, "a") as file:
                 for snack in snacks:
-                    file.write(f"{snack.write.snack()}\n")
+                    file.write(f"{snack.write_snack()}\n")
 
         except Exception as e:
             print(f"Error for save snacks in file: {e}")
